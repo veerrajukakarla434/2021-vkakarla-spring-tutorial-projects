@@ -47,3 +47,40 @@
 
 * The Web-Portlet module provides the MVC implementation to be used in a portlet environment and mirrors the functionality of Web-Servlet module.
 
+#### Spring – IoC Containers
+
+* The Spring IoC container is at the core of the Spring Framework. The container will create the objects, wire them together, configure them, and manage their complete life cycle from creation till destruction. The Spring container uses dependency injection (DI) to manage the components that make up an application.
+
+* Spring provides following two types of containers.
+
+ * **BeanFactory container**
+ * **ApplicationContext container**
+ 
+#### 1. BeanFactory
+* A BeanFactory is essentially nothing more than the interface for an advanced factory capable of maintaining a registry of different beans and their dependencies.
+* The BeanFactory enables us to read bean definitions and access them using the bean factory.
+
+#### 1.1. How to create BeanFactory
+* When using just the BeanFactory we can create one and read in some bean definitions in the XML format as follows:
+
+```java
+How to Create XmlBeanFactory
+InputStream is = new FileInputStream("beans.xml");
+BeanFactory factory = new XmlBeanFactory(is);
+ 
+//Get bean
+HelloWorld obj = (HelloWorld) factory.getBean("helloWorld");
+```
+
+* Other ways to create bean factory are as below:
+```java
+How to Create XmlBeanFactory
+Resource resource = new FileSystemResource("beans.xml");
+BeanFactory factory = new XmlBeanFactory(resource);
+ 
+ClassPathResource resource = new ClassPathResource("beans.xml");
+BeanFactory factory = new XmlBeanFactory(resource);
+```
+
+
+
