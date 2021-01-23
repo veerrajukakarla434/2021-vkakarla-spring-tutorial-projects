@@ -6,11 +6,11 @@
 
 ![spring-overview](https://github.com/veerrajukakarla434/vrk-spring-tutorial-projects/blob/main/src/images/spring-overview.png "spring-overview")
 
-#### Spring modules description 
+##### Spring modules description 
 
-Spring is well-organized architecture consisting  of seven modules. Modules in the Spring framework are:
+* Spring is well-organized architecture consisting  of seven modules. Modules in the Spring framework are:
 
-* **Core Container:**
+#### Core Container:
 
 * The Core Container consists of the Core, Beans, Context, and Expression Language modules the details of which are as follows −
 
@@ -22,7 +22,7 @@ Spring is well-organized architecture consisting  of seven modules. Modules in t
 
 * The SpEL module provides a powerful expression language for querying and manipulating an object graph at runtime.
 
-* **Data Access/Integration:**
+#### Data Access/Integration:
 
 * The Data Access/Integration layer consists of the JDBC, ORM, OXM, JMS and Transaction modules whose detail is as follows −
 
@@ -36,7 +36,7 @@ Spring is well-organized architecture consisting  of seven modules. Modules in t
 
 * The Transaction module supports programmatic and declarative transaction management for classes that implement special interfaces and for all your POJOs.
 
-* **Web:**
+#### Web:
 * The Web layer consists of the Web, Web-MVC, Web-Socket, and Web-Portlet modules the details of which are as follows −
 
 * The Web module provides basic web-oriented integration features such as multipart file-upload functionality and the initialization of the IoC container using servlet listeners and a web-oriented application context.
