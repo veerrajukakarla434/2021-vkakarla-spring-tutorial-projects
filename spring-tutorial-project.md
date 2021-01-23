@@ -49,7 +49,9 @@
 
 #### Spring – IoC Containers
 
-* The Spring IoC container is at the core of the Spring Framework. The container will create the objects, wire them together, configure them, and manage their complete life cycle from creation till destruction. The Spring container uses dependency injection (DI) to manage the components that make up an application.
+* The Spring IoC container is at the core of the Spring Framework. 
+* The container will create the objects, wire them together, configure them, and manage their complete life cycle from creation till destruction. 
+* The Spring container uses dependency injection (DI) to manage the components that make up an application.
 
 * Spring provides following two types of containers.
 
@@ -104,5 +106,10 @@ BeanFactory factory = new XmlBeanFactory(resource);
 ApplicationContext context = new FileSystemXmlApplicationContext("beans.xml");
 HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
 ```
+#### Difference between BeanFactory and the ApplicationContext
+
+* The org.springframework.beans.factory.BeanFactory and the org.springframework.context.ApplicationContext interfaces acts as the IoC container. 
+* The ApplicationContext interface is built on top of the BeanFactory interface. 
+* It adds some extra functionality than BeanFactory such as simple integration with Spring's AOP, message resource handling (for I18N), event propagation, application layer specific context (e.g. WebApplicationContext) for web application. So it is better to use ApplicationContext than BeanFactory.
 
 
