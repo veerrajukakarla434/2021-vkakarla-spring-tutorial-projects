@@ -74,7 +74,8 @@ HelloWorld obj = (HelloWorld) factory.getBean("helloWorld");
 
 * Other ways to create bean factory are as below:
 ```console
-How to Create XmlBeanFactory
+//How to Create XmlBeanFactory
+
 Resource resource = new FileSystemResource("beans.xml");
 BeanFactory factory = new XmlBeanFactory(resource);
  
@@ -98,7 +99,8 @@ BeanFactory factory = new XmlBeanFactory(resource);
 #### 2.2. How to create ApplicationContext
 * A sample code for application context instantiation will look like this.
 ```console
-How to create ApplicationContext
+//How to create ApplicationContext
+
 ApplicationContext context = new FileSystemXmlApplicationContext("beans.xml");
 HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
 ```
