@@ -81,6 +81,26 @@ BeanFactory factory = new XmlBeanFactory(resource);
 ClassPathResource resource = new ClassPathResource("beans.xml");
 BeanFactory factory = new XmlBeanFactory(resource);
 ```
+#### 2. ApplicationContext
+* ApplicationContext container adds more enterprise-specific functionality such as the ability to resolve textual messages from a properties file and the ability to publish application events to interested event listeners. This container is defined by the org.springframework.context.ApplicationContext interface.
 
+* The ApplicationContext container includes all functionality of the BeanFactory container, so it is generally recommended over the BeanFactory. BeanFactory can still be used for lightweight applications like mobile devices or applet based applications where data volume and speed is significant.
+
+#### 2.1. Types of ApplicationContext
+* The most commonly used ApplicationContext implementations are:
+
+* **FileSystemXmlApplicationContext** – This container loads the definitions of the beans from an XML file. Here you need to provide the full path of the XML bean configuration file to the constructor.
+
+* **ClassPathXmlApplicationContext** – This container loads the definitions of the beans from an XML file. Here you do not need to provide the full path of the XML file but you need to set CLASSPATH properly because this container will look bean configuration XML file in CLASSPATH.
+
+* **WebXmlApplicationContext** – This container loads the XML file with definitions of all beans from within a web application.
+
+#### 2.2. How to create ApplicationContext
+* A sample code for application context instantiation will look like this.
+```java
+How to create ApplicationContext
+ApplicationContext context = new FileSystemXmlApplicationContext("beans.xml");
+HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
+```
 
 
